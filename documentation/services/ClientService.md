@@ -1,0 +1,190 @@
+# ClientService
+
+A list of all methods in the `ClientService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                               | Description |
+| :---------------------------------------------------- | :---------- |
+| [get_user](#get_user)                                 |             |
+| [get_user_callbacks](#get_user_callbacks)             |             |
+| [post_user_callbacks](#post_user_callbacks)           |             |
+| [get_user_retry_settings](#get_user_retry_settings)   |             |
+| [post_user_retry_settings](#post_user_retry_settings) |             |
+
+## get_user
+
+- HTTP Method: `GET`
+- Endpoint: `/api/Client`
+
+**Parameters**
+
+| Name        | Type | Required | Description               |
+| :---------- | :--- | :------- | :------------------------ |
+| api_version | str  | ❌       | The requested API version |
+
+**Return Type**
+
+`ClientInfo`
+
+**Example Usage Code Snippet**
+
+```python
+from real_nex_sync_api_data_facade import RealNexSyncApiDataFacade
+
+sdk = RealNexSyncApiDataFacade(
+    api_key="YOUR_API_KEY",
+    api_key_header="YOUR_API_KEY_HEADER",
+    timeout=10000
+)
+
+result = sdk.client.get_user(api_version="1.0")
+
+print(result)
+```
+
+## get_user_callbacks
+
+- HTTP Method: `GET`
+- Endpoint: `/api/Client/callbacks`
+
+**Parameters**
+
+| Name        | Type | Required | Description               |
+| :---------- | :--- | :------- | :------------------------ |
+| api_version | str  | ❌       | The requested API version |
+
+**Return Type**
+
+`ClientCallbacks`
+
+**Example Usage Code Snippet**
+
+```python
+from real_nex_sync_api_data_facade import RealNexSyncApiDataFacade
+
+sdk = RealNexSyncApiDataFacade(
+    api_key="YOUR_API_KEY",
+    api_key_header="YOUR_API_KEY_HEADER",
+    timeout=10000
+)
+
+result = sdk.client.get_user_callbacks(api_version="1.0")
+
+print(result)
+```
+
+## post_user_callbacks
+
+- HTTP Method: `POST`
+- Endpoint: `/api/Client/callbacks`
+
+**Parameters**
+
+| Name         | Type                                            | Required | Description               |
+| :----------- | :---------------------------------------------- | :------- | :------------------------ |
+| request_body | [ClientCallbacks](../models/ClientCallbacks.md) | ❌       | The request body.         |
+| api_version  | str                                             | ❌       | The requested API version |
+
+**Return Type**
+
+`ClientCallbacks`
+
+**Example Usage Code Snippet**
+
+```python
+from real_nex_sync_api_data_facade import RealNexSyncApiDataFacade
+from real_nex_sync_api_data_facade.models import ClientCallbacks
+
+sdk = RealNexSyncApiDataFacade(
+    api_key="YOUR_API_KEY",
+    api_key_header="YOUR_API_KEY_HEADER",
+    timeout=10000
+)
+
+request_body = ClientCallbacks(
+    listing_create_callback_url="listingCreateCallbackUrl",
+    listing_update_callback_url="listingUpdateCallbackUrl",
+    listing_delete_callback_url="listingDeleteCallbackUrl"
+)
+
+result = sdk.client.post_user_callbacks(
+    request_body=request_body,
+    api_version="1.0"
+)
+
+print(result)
+```
+
+## get_user_retry_settings
+
+- HTTP Method: `GET`
+- Endpoint: `/api/Client/retrysettings`
+
+**Parameters**
+
+| Name        | Type | Required | Description               |
+| :---------- | :--- | :------- | :------------------------ |
+| api_version | str  | ❌       | The requested API version |
+
+**Return Type**
+
+`ClientRetrySettings`
+
+**Example Usage Code Snippet**
+
+```python
+from real_nex_sync_api_data_facade import RealNexSyncApiDataFacade
+
+sdk = RealNexSyncApiDataFacade(
+    api_key="YOUR_API_KEY",
+    api_key_header="YOUR_API_KEY_HEADER",
+    timeout=10000
+)
+
+result = sdk.client.get_user_retry_settings(api_version="1.0")
+
+print(result)
+```
+
+## post_user_retry_settings
+
+- HTTP Method: `POST`
+- Endpoint: `/api/Client/retrysettings`
+
+**Parameters**
+
+| Name         | Type                                                    | Required | Description               |
+| :----------- | :------------------------------------------------------ | :------- | :------------------------ |
+| request_body | [ClientRetrySettings](../models/ClientRetrySettings.md) | ❌       | The request body.         |
+| api_version  | str                                                     | ❌       | The requested API version |
+
+**Return Type**
+
+`ClientRetrySettings`
+
+**Example Usage Code Snippet**
+
+```python
+from real_nex_sync_api_data_facade import RealNexSyncApiDataFacade
+from real_nex_sync_api_data_facade.models import ClientRetrySettings
+
+sdk = RealNexSyncApiDataFacade(
+    api_key="YOUR_API_KEY",
+    api_key_header="YOUR_API_KEY_HEADER",
+    timeout=10000
+)
+
+request_body = ClientRetrySettings(
+    retry_policy="retryPolicy",
+    retry_period=8,
+    retry_max_count=2
+)
+
+result = sdk.client.post_user_retry_settings(
+    request_body=request_body,
+    api_version="1.0"
+)
+
+print(result)
+```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->
