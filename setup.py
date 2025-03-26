@@ -1,10 +1,9 @@
 from setuptools import setup, find_packages
 import os
 
-# Try to read README if it exists
-readme_file = "README.md"
-if os.path.exists(readme_file):
-    with open(readme_file, "r", encoding="utf-8") as f:
+# Try to read README.md, fallback if not found (for Render)
+if os.path.exists("README.md"):
+    with open("README.md", "r", encoding="utf-8") as f:
         long_description = f.read()
 else:
     long_description = "RealNex Sync API Data Facade SDK"
@@ -14,11 +13,9 @@ setup(
     version="1.0.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    install_requires=[
-        "requests>=2.31.0"
-    ],
+    install_requires=["requests>=2.31.0"],
     author="Your Name",
-    author_email="your@email.com",
+    author_email="your.email@example.com",
     description="RealNex Sync API Data Facade SDK",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -28,5 +25,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.7',
+    python_requires=">=3.7",
 )
