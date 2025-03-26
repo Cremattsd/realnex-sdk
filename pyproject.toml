@@ -7,8 +7,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "real_nex_sync_api_data_facade"
 version = "1.0.0"
-description = """"""
-readme = "PyPI_README.md"
+description = "RealNex Sync API Data Facade SDK"
+readme = "PyPI_README.md"  # Ensure this file exists and has content
+long_description = "file: PyPI_README.md"  # Properly link the readme content
+long_description_content_type = "text/markdown"
 requires-python = ">=3.7"
 dependencies = [
     "requests>=2.31.0"
