@@ -1,8 +1,13 @@
 from setuptools import setup, find_packages
+import os
 
-# Read the content of the README file
-with open("README.md", "r", encoding="utf-8") as readme_file:
-    long_description = readme_file.read()
+# Try to read README if it exists
+readme_file = "README.md"
+if os.path.exists(readme_file):
+    with open(readme_file, "r", encoding="utf-8") as f:
+        long_description = f.read()
+else:
+    long_description = "RealNex Sync API Data Facade SDK"
 
 setup(
     name="real_nex_sync_api_data_facade",
@@ -13,7 +18,7 @@ setup(
         "requests>=2.31.0"
     ],
     author="Your Name",
-    author_email="your.email@example.com",
+    author_email="your@email.com",
     description="RealNex Sync API Data Facade SDK",
     long_description=long_description,
     long_description_content_type="text/markdown",
