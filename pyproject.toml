@@ -9,7 +9,7 @@ name = "real_nex_sync_api_data_facade"
 version = "1.0.0"
 description = "RealNex Sync API Data Facade SDK"
 readme = "PyPI_README.md"  # Ensure this file exists and has content
-long_description = "file: PyPI_README.md"  # Properly link the readme content
+long_description = "file: README.md"  # Properly link the readme content
 long_description_content_type = "text/markdown"
 requires-python = ">=3.7"
 dependencies = [
