@@ -11,7 +11,7 @@ setup(
     author="Your Name",
     author_email="your.email@example.com",
     description="RealNex Sync API Data Facade",
-    long_description=open('README.md').read(),
+    long_description="",  # Empty long description as a workaround
     long_description_content_type="text/markdown",
     url="https://github.com/Cremattsd/realnex-sdk",
     classifiers=[
