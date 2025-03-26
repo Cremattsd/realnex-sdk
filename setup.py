@@ -1,9 +1,10 @@
 from setuptools import setup, find_packages
+import os
 
-# ✅ Safe fallback if README.md is missing on Render
+# Try to read README.md, fallback if not found
 try:
-    with open("README.md", "r", encoding="utf-8") as readme_file:
-        long_description = readme_file.read()
+    with open("README.md", "r", encoding="utf-8") as f:
+        long_description = f.read()
 except FileNotFoundError:
     long_description = "RealNex Sync API Data Facade SDK"
 
