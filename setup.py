@@ -1,5 +1,9 @@
 from setuptools import setup, find_packages
 
+# Read the content of the README file
+with open("README.md", "r") as readme_file:
+    long_description = readme_file.read()
+
 setup(
     name="real_nex_sync_api_data_facade",
     version="1.0.0",
@@ -11,7 +15,7 @@ setup(
     author="Your Name",
     author_email="your.email@example.com",
     description="RealNex Sync API Data Facade SDK",
-    long_description=open('README.md').read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Cremattsd/realnex-sdk",
     classifiers=[
