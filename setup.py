@@ -1,8 +1,7 @@
 from setuptools import setup, find_packages
 
-# Safely load README.md if available
 try:
-    with open("README.md", "r") as readme_file:
+    with open("README.md", "r", encoding="utf-8") as readme_file:
         long_description = readme_file.read()
 except FileNotFoundError:
     long_description = "RealNex Sync API Data Facade SDK"
