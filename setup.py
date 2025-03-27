@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 try:
-    with open("README.md", "r") as f:
+    with open("README.md", "r", encoding="utf-8") as f:
         long_description = f.read()
 except FileNotFoundError:
-    long_description = "RealNex SDK for syncing API data."
+    long_description = "RealNex Sync SDK - fallback description used during install."
 
 setup(
     name="real_nex_sync_api_data_facade",
